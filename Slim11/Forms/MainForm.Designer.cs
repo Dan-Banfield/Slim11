@@ -154,6 +154,7 @@
             this.restoreAutomaticUpdatesButton.TabStop = false;
             this.restoreAutomaticUpdatesButton.Text = "Restore";
             this.restoreAutomaticUpdatesButton.UseVisualStyleBackColor = true;
+            this.restoreAutomaticUpdatesButton.Click += new System.EventHandler(this.restoreAutomaticUpdatesButton_Click);
             // 
             // fixAutomaticUpdatesButton
             // 
@@ -166,6 +167,7 @@
             this.fixAutomaticUpdatesButton.TabStop = false;
             this.fixAutomaticUpdatesButton.Text = "Fix";
             this.fixAutomaticUpdatesButton.UseVisualStyleBackColor = true;
+            this.fixAutomaticUpdatesButton.Click += new System.EventHandler(this.fixAutomaticUpdatesButton_Click);
             // 
             // groupBox2
             // 

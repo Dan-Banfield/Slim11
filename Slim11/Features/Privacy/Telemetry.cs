@@ -33,8 +33,10 @@ namespace Slim11.Features.Privacy
         {
             try
             {
-                RegistryKey registryKey = Registry.LocalMachine.OpenSubKey(@"Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\CompatTelRunner.exe", true);
-                registryKey.DeleteValue("Debugger");
+                using (RegistryKey registryKey = Registry.LocalMachine.OpenSubKey(@"Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\CompatTelRunner.exe", true))
+                {
+                    registryKey.DeleteValue("Debugger");
+                }
                 MessageBox.ShowInfo("Telemetry enabled successfully.");
             }
             catch { MessageBox.ShowError("Failed to enable telemetry."); }

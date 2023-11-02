@@ -27,6 +27,20 @@ namespace Slim11.Forms
             CommandInvoker.UndoCommands();
         }
 
+
+
+        private void fixAutomaticUpdatesButton_Click(object sender, System.EventArgs e)
+        {
+            CommandInvoker.AddCommand(AutomaticUpdates.Instance);
+            CommandInvoker.ExecuteCommands();
+        }
+
+        private void restoreAutomaticUpdatesButton_Click(object sender, System.EventArgs e)
+        {
+            CommandInvoker.AddCommand(AutomaticUpdates.Instance);
+            CommandInvoker.UndoCommands();
+        }
+
         #endregion
 
         #endregion
