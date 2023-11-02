@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Features\CommandInvoker.cs" />
+    <Compile Include="Features\ICommand.cs" />
+    <Compile Include="Features\Privacy\Telemetry.cs" />
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

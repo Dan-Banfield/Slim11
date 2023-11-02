@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.titleLabel = new System.Windows.Forms.Label();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -40,10 +41,18 @@
             this.restoreDiagnosticDataButton = new System.Windows.Forms.Button();
             this.fixDiagnosticDataButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.restoreAutomaticUpdatesButton = new System.Windows.Forms.Button();
+            this.fixAutomaticUpdatesButton = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // titleLabel
@@ -71,6 +80,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.groupBox4);
+            this.tabPage1.Controls.Add(this.groupBox3);
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -99,7 +110,7 @@
             this.groupBox1.Controls.Add(this.restoreTelemetryButton);
             this.groupBox1.Controls.Add(this.fixTelemetryButton);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(24, 17);
+            this.groupBox1.Location = new System.Drawing.Point(24, 27);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(195, 84);
             this.groupBox1.TabIndex = 5;
@@ -134,7 +145,7 @@
             this.groupBox2.Controls.Add(this.restoreDiagnosticDataButton);
             this.groupBox2.Controls.Add(this.fixDiagnosticDataButton);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(24, 116);
+            this.groupBox2.Location = new System.Drawing.Point(24, 126);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(195, 84);
             this.groupBox2.TabIndex = 6;
@@ -180,6 +191,80 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "*This program is designed for Windows 11.";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.restoreAutomaticUpdatesButton);
+            this.groupBox3.Controls.Add(this.fixAutomaticUpdatesButton);
+            this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(24, 226);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(195, 84);
+            this.groupBox3.TabIndex = 7;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Automatic Updates";
+            this.toolTip.SetToolTip(this.groupBox3, resources.GetString("groupBox3.ToolTip"));
+            // 
+            // restoreAutomaticUpdatesButton
+            // 
+            this.restoreAutomaticUpdatesButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.restoreAutomaticUpdatesButton.ForeColor = System.Drawing.Color.Crimson;
+            this.restoreAutomaticUpdatesButton.Location = new System.Drawing.Point(100, 35);
+            this.restoreAutomaticUpdatesButton.Name = "restoreAutomaticUpdatesButton";
+            this.restoreAutomaticUpdatesButton.Size = new System.Drawing.Size(78, 31);
+            this.restoreAutomaticUpdatesButton.TabIndex = 4;
+            this.restoreAutomaticUpdatesButton.TabStop = false;
+            this.restoreAutomaticUpdatesButton.Text = "Restore";
+            this.restoreAutomaticUpdatesButton.UseVisualStyleBackColor = true;
+            // 
+            // fixAutomaticUpdatesButton
+            // 
+            this.fixAutomaticUpdatesButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fixAutomaticUpdatesButton.ForeColor = System.Drawing.Color.DarkGreen;
+            this.fixAutomaticUpdatesButton.Location = new System.Drawing.Point(16, 35);
+            this.fixAutomaticUpdatesButton.Name = "fixAutomaticUpdatesButton";
+            this.fixAutomaticUpdatesButton.Size = new System.Drawing.Size(78, 31);
+            this.fixAutomaticUpdatesButton.TabIndex = 3;
+            this.fixAutomaticUpdatesButton.TabStop = false;
+            this.fixAutomaticUpdatesButton.Text = "Fix";
+            this.fixAutomaticUpdatesButton.UseVisualStyleBackColor = true;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.button1);
+            this.groupBox4.Controls.Add(this.button2);
+            this.groupBox4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(293, 27);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(195, 84);
+            this.groupBox4.TabIndex = 8;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Location Tracking";
+            this.toolTip.SetToolTip(this.groupBox4, "Wherever you are, Windows 11 is tracking your location.");
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Crimson;
+            this.button1.Location = new System.Drawing.Point(100, 35);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(78, 31);
+            this.button1.TabIndex = 4;
+            this.button1.TabStop = false;
+            this.button1.Text = "Restore";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.DarkGreen;
+            this.button2.Location = new System.Drawing.Point(16, 35);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(78, 31);
+            this.button2.TabIndex = 3;
+            this.button2.TabStop = false;
+            this.button2.Text = "Fix";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
@@ -198,6 +283,8 @@
             this.tabPage1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -216,6 +303,12 @@
         private System.Windows.Forms.Button restoreDiagnosticDataButton;
         private System.Windows.Forms.Button fixDiagnosticDataButton;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button restoreAutomaticUpdatesButton;
+        private System.Windows.Forms.Button fixAutomaticUpdatesButton;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 
