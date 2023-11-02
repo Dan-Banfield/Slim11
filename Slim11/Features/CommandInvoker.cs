@@ -13,5 +13,11 @@ namespace Slim11.Features
             foreach (ICommand command in commandList) { command.Execute(); }
             commandList.Clear();
         }
+
+        internal static void UndoCommands()
+        {
+            foreach (ICommand command in commandList) { command.Undo(); }
+            commandList.Clear();
+        }
     }
 }

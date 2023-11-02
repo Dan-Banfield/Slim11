@@ -33,26 +33,26 @@
             this.titleLabel = new System.Windows.Forms.Label();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.fixTelemetryButton = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.restoreTelemetryButton = new System.Windows.Forms.Button();
-            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.restoreDiagnosticDataButton = new System.Windows.Forms.Button();
-            this.fixDiagnosticDataButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.restoreAutomaticUpdatesButton = new System.Windows.Forms.Button();
-            this.fixAutomaticUpdatesButton = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.restoreAutomaticUpdatesButton = new System.Windows.Forms.Button();
+            this.fixAutomaticUpdatesButton = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.restoreDiagnosticDataButton = new System.Windows.Forms.Button();
+            this.fixDiagnosticDataButton = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.restoreTelemetryButton = new System.Windows.Forms.Button();
+            this.fixTelemetryButton = new System.Windows.Forms.Button();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // titleLabel
@@ -93,52 +93,79 @@
             this.tabPage1.Text = "Privacy";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // fixTelemetryButton
+            // groupBox4
             // 
-            this.fixTelemetryButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fixTelemetryButton.ForeColor = System.Drawing.Color.DarkGreen;
-            this.fixTelemetryButton.Location = new System.Drawing.Point(16, 35);
-            this.fixTelemetryButton.Name = "fixTelemetryButton";
-            this.fixTelemetryButton.Size = new System.Drawing.Size(78, 31);
-            this.fixTelemetryButton.TabIndex = 3;
-            this.fixTelemetryButton.TabStop = false;
-            this.fixTelemetryButton.Text = "Fix";
-            this.fixTelemetryButton.UseVisualStyleBackColor = true;
+            this.groupBox4.Controls.Add(this.button1);
+            this.groupBox4.Controls.Add(this.button2);
+            this.groupBox4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(293, 27);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(195, 84);
+            this.groupBox4.TabIndex = 8;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Location Tracking";
+            this.toolTip.SetToolTip(this.groupBox4, "Wherever you are, Windows 11 is tracking your location.");
             // 
-            // groupBox1
+            // button1
             // 
-            this.groupBox1.Controls.Add(this.restoreTelemetryButton);
-            this.groupBox1.Controls.Add(this.fixTelemetryButton);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(24, 27);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(195, 84);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Telemetry";
-            this.toolTip.SetToolTip(this.groupBox1, "Your computer periodically collects technical information and sends it to Microso" +
-        "ft.\r\nDisabling this process can speed up your computer and conserve valuable res" +
-        "ources.");
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Crimson;
+            this.button1.Location = new System.Drawing.Point(100, 35);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(78, 31);
+            this.button1.TabIndex = 4;
+            this.button1.TabStop = false;
+            this.button1.Text = "Restore";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // restoreTelemetryButton
+            // button2
             // 
-            this.restoreTelemetryButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.restoreTelemetryButton.ForeColor = System.Drawing.Color.Crimson;
-            this.restoreTelemetryButton.Location = new System.Drawing.Point(100, 35);
-            this.restoreTelemetryButton.Name = "restoreTelemetryButton";
-            this.restoreTelemetryButton.Size = new System.Drawing.Size(78, 31);
-            this.restoreTelemetryButton.TabIndex = 4;
-            this.restoreTelemetryButton.TabStop = false;
-            this.restoreTelemetryButton.Text = "Restore";
-            this.restoreTelemetryButton.UseVisualStyleBackColor = true;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.DarkGreen;
+            this.button2.Location = new System.Drawing.Point(16, 35);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(78, 31);
+            this.button2.TabIndex = 3;
+            this.button2.TabStop = false;
+            this.button2.Text = "Fix";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // toolTip
+            // groupBox3
             // 
-            this.toolTip.AutoPopDelay = 5000;
-            this.toolTip.InitialDelay = 500;
-            this.toolTip.ReshowDelay = 100;
-            this.toolTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.toolTip.ToolTipTitle = "Information";
+            this.groupBox3.Controls.Add(this.restoreAutomaticUpdatesButton);
+            this.groupBox3.Controls.Add(this.fixAutomaticUpdatesButton);
+            this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(24, 226);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(195, 84);
+            this.groupBox3.TabIndex = 7;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Automatic Updates";
+            this.toolTip.SetToolTip(this.groupBox3, resources.GetString("groupBox3.ToolTip"));
+            // 
+            // restoreAutomaticUpdatesButton
+            // 
+            this.restoreAutomaticUpdatesButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.restoreAutomaticUpdatesButton.ForeColor = System.Drawing.Color.Crimson;
+            this.restoreAutomaticUpdatesButton.Location = new System.Drawing.Point(100, 35);
+            this.restoreAutomaticUpdatesButton.Name = "restoreAutomaticUpdatesButton";
+            this.restoreAutomaticUpdatesButton.Size = new System.Drawing.Size(78, 31);
+            this.restoreAutomaticUpdatesButton.TabIndex = 4;
+            this.restoreAutomaticUpdatesButton.TabStop = false;
+            this.restoreAutomaticUpdatesButton.Text = "Restore";
+            this.restoreAutomaticUpdatesButton.UseVisualStyleBackColor = true;
+            // 
+            // fixAutomaticUpdatesButton
+            // 
+            this.fixAutomaticUpdatesButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fixAutomaticUpdatesButton.ForeColor = System.Drawing.Color.DarkGreen;
+            this.fixAutomaticUpdatesButton.Location = new System.Drawing.Point(16, 35);
+            this.fixAutomaticUpdatesButton.Name = "fixAutomaticUpdatesButton";
+            this.fixAutomaticUpdatesButton.Size = new System.Drawing.Size(78, 31);
+            this.fixAutomaticUpdatesButton.TabIndex = 3;
+            this.fixAutomaticUpdatesButton.TabStop = false;
+            this.fixAutomaticUpdatesButton.Text = "Fix";
+            this.fixAutomaticUpdatesButton.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -179,6 +206,55 @@
             this.fixDiagnosticDataButton.Text = "Fix";
             this.fixDiagnosticDataButton.UseVisualStyleBackColor = true;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.restoreTelemetryButton);
+            this.groupBox1.Controls.Add(this.fixTelemetryButton);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(24, 27);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(195, 84);
+            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Telemetry";
+            this.toolTip.SetToolTip(this.groupBox1, "Your computer periodically collects technical information and sends it to Microso" +
+        "ft.\r\nDisabling this process can speed up your computer and conserve valuable res" +
+        "ources.");
+            // 
+            // restoreTelemetryButton
+            // 
+            this.restoreTelemetryButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.restoreTelemetryButton.ForeColor = System.Drawing.Color.Crimson;
+            this.restoreTelemetryButton.Location = new System.Drawing.Point(100, 35);
+            this.restoreTelemetryButton.Name = "restoreTelemetryButton";
+            this.restoreTelemetryButton.Size = new System.Drawing.Size(78, 31);
+            this.restoreTelemetryButton.TabIndex = 4;
+            this.restoreTelemetryButton.TabStop = false;
+            this.restoreTelemetryButton.Text = "Restore";
+            this.restoreTelemetryButton.UseVisualStyleBackColor = true;
+            this.restoreTelemetryButton.Click += new System.EventHandler(this.restoreTelemetryButton_Click);
+            // 
+            // fixTelemetryButton
+            // 
+            this.fixTelemetryButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fixTelemetryButton.ForeColor = System.Drawing.Color.DarkGreen;
+            this.fixTelemetryButton.Location = new System.Drawing.Point(16, 35);
+            this.fixTelemetryButton.Name = "fixTelemetryButton";
+            this.fixTelemetryButton.Size = new System.Drawing.Size(78, 31);
+            this.fixTelemetryButton.TabIndex = 3;
+            this.fixTelemetryButton.TabStop = false;
+            this.fixTelemetryButton.Text = "Fix";
+            this.fixTelemetryButton.UseVisualStyleBackColor = true;
+            this.fixTelemetryButton.Click += new System.EventHandler(this.fixTelemetryButton_Click);
+            // 
+            // toolTip
+            // 
+            this.toolTip.AutoPopDelay = 5000;
+            this.toolTip.InitialDelay = 500;
+            this.toolTip.ReshowDelay = 100;
+            this.toolTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTip.ToolTipTitle = "Information";
+            // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -190,80 +266,6 @@
             this.label1.Size = new System.Drawing.Size(242, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "*This program is designed for Windows 11.";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.restoreAutomaticUpdatesButton);
-            this.groupBox3.Controls.Add(this.fixAutomaticUpdatesButton);
-            this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(24, 226);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(195, 84);
-            this.groupBox3.TabIndex = 7;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Automatic Updates";
-            this.toolTip.SetToolTip(this.groupBox3, resources.GetString("groupBox3.ToolTip"));
-            // 
-            // restoreAutomaticUpdatesButton
-            // 
-            this.restoreAutomaticUpdatesButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.restoreAutomaticUpdatesButton.ForeColor = System.Drawing.Color.Crimson;
-            this.restoreAutomaticUpdatesButton.Location = new System.Drawing.Point(100, 35);
-            this.restoreAutomaticUpdatesButton.Name = "restoreAutomaticUpdatesButton";
-            this.restoreAutomaticUpdatesButton.Size = new System.Drawing.Size(78, 31);
-            this.restoreAutomaticUpdatesButton.TabIndex = 4;
-            this.restoreAutomaticUpdatesButton.TabStop = false;
-            this.restoreAutomaticUpdatesButton.Text = "Restore";
-            this.restoreAutomaticUpdatesButton.UseVisualStyleBackColor = true;
-            // 
-            // fixAutomaticUpdatesButton
-            // 
-            this.fixAutomaticUpdatesButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fixAutomaticUpdatesButton.ForeColor = System.Drawing.Color.DarkGreen;
-            this.fixAutomaticUpdatesButton.Location = new System.Drawing.Point(16, 35);
-            this.fixAutomaticUpdatesButton.Name = "fixAutomaticUpdatesButton";
-            this.fixAutomaticUpdatesButton.Size = new System.Drawing.Size(78, 31);
-            this.fixAutomaticUpdatesButton.TabIndex = 3;
-            this.fixAutomaticUpdatesButton.TabStop = false;
-            this.fixAutomaticUpdatesButton.Text = "Fix";
-            this.fixAutomaticUpdatesButton.UseVisualStyleBackColor = true;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.button1);
-            this.groupBox4.Controls.Add(this.button2);
-            this.groupBox4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(293, 27);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(195, 84);
-            this.groupBox4.TabIndex = 8;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Location Tracking";
-            this.toolTip.SetToolTip(this.groupBox4, "Wherever you are, Windows 11 is tracking your location.");
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Crimson;
-            this.button1.Location = new System.Drawing.Point(100, 35);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(78, 31);
-            this.button1.TabIndex = 4;
-            this.button1.TabStop = false;
-            this.button1.Text = "Restore";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.DarkGreen;
-            this.button2.Location = new System.Drawing.Point(16, 35);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(78, 31);
-            this.button2.TabIndex = 3;
-            this.button2.TabStop = false;
-            this.button2.Text = "Fix";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -281,10 +283,10 @@
             this.Text = "Slim11";
             this.tabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

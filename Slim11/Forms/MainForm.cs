@@ -1,4 +1,6 @@
-﻿using System.Windows.Forms;
+﻿using Slim11.Features;
+using System.Windows.Forms;
+using Slim11.Features.Privacy;
 
 namespace Slim11.Forms
 {
@@ -8,5 +10,25 @@ namespace Slim11.Forms
         {
             InitializeComponent();
         }
+
+        #region Event Handlers
+
+        #region Buttons
+
+        private void fixTelemetryButton_Click(object sender, System.EventArgs e)
+        {
+            CommandInvoker.AddCommand(Telemetry.Instance);
+            CommandInvoker.ExecuteCommands();
+        }
+
+        private void restoreTelemetryButton_Click(object sender, System.EventArgs e)
+        {
+            CommandInvoker.AddCommand(Telemetry.Instance);
+            CommandInvoker.UndoCommands();
+        }
+
+        #endregion
+
+        #endregion
     }
 }
