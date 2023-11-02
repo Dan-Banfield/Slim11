@@ -28,15 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.titleLabel = new System.Windows.Forms.Label();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.fixTelemetryButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.restoreTelemetryButton = new System.Windows.Forms.Button();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.restoreDiagnosticDataButton = new System.Windows.Forms.Button();
+            this.fixDiagnosticDataButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // titleLabel
@@ -64,6 +71,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 39);
@@ -97,6 +105,9 @@
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Telemetry";
+            this.toolTip.SetToolTip(this.groupBox1, "Your computer periodically collects technical information and sends it to Microso" +
+        "ft.\r\nDisabling this process can speed up your computer and conserve valuable res" +
+        "ources.");
             // 
             // restoreTelemetryButton
             // 
@@ -110,21 +121,83 @@
             this.restoreTelemetryButton.Text = "Restore";
             this.restoreTelemetryButton.UseVisualStyleBackColor = true;
             // 
+            // toolTip
+            // 
+            this.toolTip.AutoPopDelay = 5000;
+            this.toolTip.InitialDelay = 500;
+            this.toolTip.ReshowDelay = 100;
+            this.toolTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTip.ToolTipTitle = "Information";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.restoreDiagnosticDataButton);
+            this.groupBox2.Controls.Add(this.fixDiagnosticDataButton);
+            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(24, 116);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(195, 84);
+            this.groupBox2.TabIndex = 6;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Diagnostic Data";
+            this.toolTip.SetToolTip(this.groupBox2, "By fixing, you\'ll disable tailored experiences that provide tips and recommendati" +
+        "ons based on your diagnostic data.\r\nSome users refer to this as telemetry or eve" +
+        "n spying");
+            // 
+            // restoreDiagnosticDataButton
+            // 
+            this.restoreDiagnosticDataButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.restoreDiagnosticDataButton.ForeColor = System.Drawing.Color.Crimson;
+            this.restoreDiagnosticDataButton.Location = new System.Drawing.Point(100, 35);
+            this.restoreDiagnosticDataButton.Name = "restoreDiagnosticDataButton";
+            this.restoreDiagnosticDataButton.Size = new System.Drawing.Size(78, 31);
+            this.restoreDiagnosticDataButton.TabIndex = 4;
+            this.restoreDiagnosticDataButton.TabStop = false;
+            this.restoreDiagnosticDataButton.Text = "Restore";
+            this.restoreDiagnosticDataButton.UseVisualStyleBackColor = true;
+            // 
+            // fixDiagnosticDataButton
+            // 
+            this.fixDiagnosticDataButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fixDiagnosticDataButton.ForeColor = System.Drawing.Color.DarkGreen;
+            this.fixDiagnosticDataButton.Location = new System.Drawing.Point(16, 35);
+            this.fixDiagnosticDataButton.Name = "fixDiagnosticDataButton";
+            this.fixDiagnosticDataButton.Size = new System.Drawing.Size(78, 31);
+            this.fixDiagnosticDataButton.TabIndex = 3;
+            this.fixDiagnosticDataButton.TabStop = false;
+            this.fixDiagnosticDataButton.Text = "Fix";
+            this.fixDiagnosticDataButton.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Crimson;
+            this.label1.Location = new System.Drawing.Point(573, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(242, 17);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "*This program is designed for Windows 11.";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(842, 478);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.titleLabel);
             this.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.Name = "MainForm";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Slim11";
             this.tabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,6 +211,11 @@
         private System.Windows.Forms.Button fixTelemetryButton;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button restoreTelemetryButton;
+        private System.Windows.Forms.ToolTip toolTip;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button restoreDiagnosticDataButton;
+        private System.Windows.Forms.Button fixDiagnosticDataButton;
+        private System.Windows.Forms.Label label1;
     }
 }
 
