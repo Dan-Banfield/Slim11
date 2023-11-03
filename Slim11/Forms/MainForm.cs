@@ -1,5 +1,6 @@
 ﻿using System;
 using Slim11.Features;
+using System.Diagnostics;
 using System.Windows.Forms;
 using Slim11.Features.Privacy;
 using System.Runtime.InteropServices;
@@ -95,6 +96,12 @@ namespace Slim11.Forms
             CommandInvoker.AddCommand(LocationTracking.Instance);
             CommandInvoker.UndoCommands();
         }
+
+        #endregion
+
+        #region Picture Boxes
+
+        private void githubLogoPictureBox_Click(object sender, EventArgs e) => Process.Start("https://github.com/Dan-Banfield/Slim11/");
 
         #endregion
 

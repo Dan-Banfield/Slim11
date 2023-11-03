@@ -33,6 +33,8 @@
             this.titleLabel = new System.Windows.Forms.Label();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.restoreAllButton = new System.Windows.Forms.Button();
+            this.fixAllButton = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.restoreLocationTrackingButton = new System.Windows.Forms.Button();
             this.fixLocationTrackingButton = new System.Windows.Forms.Button();
@@ -51,8 +53,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.fixAllButton = new System.Windows.Forms.Button();
-            this.restoreAllButton = new System.Windows.Forms.Button();
+            this.githubLogoPictureBox = new System.Windows.Forms.PictureBox();
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -61,6 +62,7 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.githubLogoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // titleLabel
@@ -82,7 +84,7 @@
             this.tabControl.Location = new System.Drawing.Point(27, 70);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(812, 379);
+            this.tabControl.Size = new System.Drawing.Size(834, 379);
             this.tabControl.TabIndex = 1;
             this.tabControl.TabStop = false;
             // 
@@ -100,10 +102,37 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 39);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(804, 336);
+            this.tabPage1.Size = new System.Drawing.Size(826, 336);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Privacy";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // restoreAllButton
+            // 
+            this.restoreAllButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.restoreAllButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.restoreAllButton.ForeColor = System.Drawing.Color.Crimson;
+            this.restoreAllButton.Location = new System.Drawing.Point(413, 19);
+            this.restoreAllButton.Name = "restoreAllButton";
+            this.restoreAllButton.Size = new System.Drawing.Size(363, 31);
+            this.restoreAllButton.TabIndex = 5;
+            this.restoreAllButton.TabStop = false;
+            this.restoreAllButton.Text = "Restore All";
+            this.restoreAllButton.UseVisualStyleBackColor = true;
+            this.restoreAllButton.Click += new System.EventHandler(this.restoreAllButton_Click);
+            // 
+            // fixAllButton
+            // 
+            this.fixAllButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fixAllButton.ForeColor = System.Drawing.Color.DarkGreen;
+            this.fixAllButton.Location = new System.Drawing.Point(15, 19);
+            this.fixAllButton.Name = "fixAllButton";
+            this.fixAllButton.Size = new System.Drawing.Size(363, 31);
+            this.fixAllButton.TabIndex = 5;
+            this.fixAllButton.TabStop = false;
+            this.fixAllButton.Text = "Fix All";
+            this.fixAllButton.UseVisualStyleBackColor = true;
+            this.fixAllButton.Click += new System.EventHandler(this.fixAllButton_Click);
             // 
             // groupBox4
             // 
@@ -117,7 +146,9 @@
             this.groupBox4.TabIndex = 8;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Location Tracking";
-            this.toolTip.SetToolTip(this.groupBox4, "Wherever you are, Windows 11 is tracking your location.");
+            this.toolTip.SetToolTip(this.groupBox4, "Wherever you are, Windows 11 and other apps are tracking your location.\r\n\r\nWARNIN" +
+        "G: Disabling this feature will prevent you from being able to track your device " +
+        "if you lose it.");
             // 
             // restoreLocationTrackingButton
             // 
@@ -283,7 +314,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Crimson;
-            this.label1.Location = new System.Drawing.Point(597, 25);
+            this.label1.Location = new System.Drawing.Point(619, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(242, 17);
             this.label1.TabIndex = 2;
@@ -293,7 +324,7 @@
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.Color.DarkGreen;
-            this.pictureBox1.Location = new System.Drawing.Point(602, 56);
+            this.pictureBox1.Location = new System.Drawing.Point(624, 56);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(11, 11);
             this.pictureBox1.TabIndex = 3;
@@ -304,7 +335,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(619, 54);
+            this.label2.Location = new System.Drawing.Point(641, 54);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 13);
             this.label2.TabIndex = 4;
@@ -315,7 +346,7 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(619, 73);
+            this.label3.Location = new System.Drawing.Point(641, 73);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(102, 13);
             this.label3.TabIndex = 6;
@@ -325,44 +356,30 @@
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.BackColor = System.Drawing.Color.Crimson;
-            this.pictureBox2.Location = new System.Drawing.Point(602, 75);
+            this.pictureBox2.Location = new System.Drawing.Point(624, 75);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(11, 11);
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
             // 
-            // fixAllButton
+            // githubLogoPictureBox
             // 
-            this.fixAllButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fixAllButton.ForeColor = System.Drawing.Color.DarkGreen;
-            this.fixAllButton.Location = new System.Drawing.Point(15, 19);
-            this.fixAllButton.Name = "fixAllButton";
-            this.fixAllButton.Size = new System.Drawing.Size(363, 31);
-            this.fixAllButton.TabIndex = 5;
-            this.fixAllButton.TabStop = false;
-            this.fixAllButton.Text = "Fix All";
-            this.fixAllButton.UseVisualStyleBackColor = true;
-            this.fixAllButton.Click += new System.EventHandler(this.fixAllButton_Click);
-            // 
-            // restoreAllButton
-            // 
-            this.restoreAllButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.restoreAllButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.restoreAllButton.ForeColor = System.Drawing.Color.Crimson;
-            this.restoreAllButton.Location = new System.Drawing.Point(408, 19);
-            this.restoreAllButton.Name = "restoreAllButton";
-            this.restoreAllButton.Size = new System.Drawing.Size(363, 31);
-            this.restoreAllButton.TabIndex = 5;
-            this.restoreAllButton.TabStop = false;
-            this.restoreAllButton.Text = "Restore All";
-            this.restoreAllButton.UseVisualStyleBackColor = true;
-            this.restoreAllButton.Click += new System.EventHandler(this.restoreAllButton_Click);
+            this.githubLogoPictureBox.Cursor = System.Windows.Forms.Cursors.Help;
+            this.githubLogoPictureBox.Image = global::Slim11.Properties.Resources.github_mark;
+            this.githubLogoPictureBox.Location = new System.Drawing.Point(105, 20);
+            this.githubLogoPictureBox.Name = "githubLogoPictureBox";
+            this.githubLogoPictureBox.Size = new System.Drawing.Size(46, 39);
+            this.githubLogoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.githubLogoPictureBox.TabIndex = 7;
+            this.githubLogoPictureBox.TabStop = false;
+            this.githubLogoPictureBox.Click += new System.EventHandler(this.githubLogoPictureBox_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(866, 478);
+            this.ClientSize = new System.Drawing.Size(888, 478);
+            this.Controls.Add(this.githubLogoPictureBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label2);
@@ -371,8 +388,10 @@
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.titleLabel);
             this.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.Name = "MainForm";
+            this.ShowIcon = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Slim11";
@@ -384,6 +403,7 @@
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.githubLogoPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -414,6 +434,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button restoreAllButton;
         private System.Windows.Forms.Button fixAllButton;
+        private System.Windows.Forms.PictureBox githubLogoPictureBox;
     }
 }
 
