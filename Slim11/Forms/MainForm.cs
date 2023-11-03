@@ -30,6 +30,24 @@ namespace Slim11.Forms
 
         #region Buttons
 
+        private void fixAllButton_Click(object sender, EventArgs e)
+        {
+            CommandInvoker.AddCommand(Telemetry.Instance);
+            CommandInvoker.AddCommand(DiagnosticData.Instance);
+            CommandInvoker.AddCommand(AutomaticUpdates.Instance);
+            CommandInvoker.AddCommand(LocationTracking.Instance);
+            CommandInvoker.ExecuteCommands();
+        }
+
+        private void restoreAllButton_Click(object sender, EventArgs e)
+        {
+            CommandInvoker.AddCommand(Telemetry.Instance);
+            CommandInvoker.AddCommand(DiagnosticData.Instance);
+            CommandInvoker.AddCommand(AutomaticUpdates.Instance);
+            CommandInvoker.AddCommand(LocationTracking.Instance);
+            CommandInvoker.UndoCommands();
+        }
+
         private void fixTelemetryButton_Click(object sender, System.EventArgs e)
         {
             CommandInvoker.AddCommand(Telemetry.Instance);
